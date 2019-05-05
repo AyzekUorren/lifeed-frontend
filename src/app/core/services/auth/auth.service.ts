@@ -4,7 +4,7 @@ import { ApiService } from '../api.service';
 import { GlobalProvider } from '../global.service';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { SignInInterface } from '../../intefaces/auth-signin.inteface';
+import { SignInInterface } from '../../intefaces/api.signin.inteface';
 
 @Injectable({
   providedIn: 'root',
