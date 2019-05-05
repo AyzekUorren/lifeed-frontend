@@ -7,10 +7,9 @@ import { TweetsComponent } from './components/tweets/tweets.component';
 import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
+  {path: '', component: TweetsComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'auth', component: AuthComponent},
-  {path: 'tweets', component: TweetsComponent},
   {path: 'search', component: SearchComponent}
 ];
 

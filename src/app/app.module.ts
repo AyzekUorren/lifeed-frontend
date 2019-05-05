@@ -24,6 +24,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
+import { MatDialogModule } from '@angular/material/dialog';
 
 // Components
 import { HeaderComponent } from './components/header/header.component';
@@ -38,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GlobalProvider } from './core/services/global.service';
 import { ApiService } from './core/services/api.service';
 import { AuthService } from './core/services/auth/auth.service';
+import { AddTweetComponent } from './components/add-tweet/add-tweet.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { AuthService } from './core/services/auth/auth.service';
     TweetsComponent,
     TweetComponent,
     SearchComponent,
+    AddTweetComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,8 +75,10 @@ import { AuthService } from './core/services/auth/auth.service';
     MatSidenavModule,
     MatListModule,
     MatBadgeModule,
+    MatDialogModule,
     HttpClientModule,
   ],
+  entryComponents: [AddTweetComponent],
   providers: [GlobalProvider, ApiService, AuthService],
   bootstrap: [AppComponent],
 })
