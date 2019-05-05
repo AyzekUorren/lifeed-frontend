@@ -6,15 +6,15 @@
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__link"><a mat-button routerLink=".">Home</a></li>
-        <li class="nav__link"><a mat-button routerLink=".">Tweets</a></li>
-        <li class="nav__link"><a mat-button routerLink=".">Search</a></li>
+        <li class="nav__link"><a mat-button routerLink="/tweets">Tweets</a></li>
+        <li class="nav__link"><a mat-button routerLink="/search">Search</a></li>
       </ul>
     </nav>
     <a routerLink="." class="mat-title title">TwitterApp</a>
     <div class="header__sub-menu">
       <button class="user-photo" mat-icon-button [matMenuTriggerFor]="menu"></button>
       <mat-menu #menu="matMenu">
-        <button routerLink="." mat-menu-item>
+        <button routerLink="/profile" mat-menu-item>
           <mat-icon>person</mat-icon>
           <span>Profile</span>
         </button>
@@ -31,7 +31,7 @@
   </div>
   <div *ngIf="show" class="burger-menu">
     <a mat-stroked-button routerLink=".">Home</a>
-    <a mat-stroked-button routerLink=".">Tweets</a>
-    <a mat-stroked-button routerLink=".">Search</a>
+    <a mat-stroked-button routerLink="/tweets">Tweets</a>
+    <a mat-stroked-button routerLink="/search">Search</a>
   </div>
 </div>

@@ -1,0 +1,84 @@
+.tweet {
+    background: #f5f5f5;
+    border: 1px solid rgba(0,0,0,0.05);
+    margin: 10px;
+    
+    .user-photo {
+        width: 80px;
+        height: 80px;
+        margin: 5px;
+    }
+
+    .tweet-photo {
+        width: 80px;
+        height: 80px;
+    }
+    mat-divider {
+        margin: 20px;
+    }
+}
+
+.tweet__card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+    box-shadow: none;
+
+    mat-icon {
+        color: rgba(0, 0, 0, 0.54);
+    }
+}
+
+.tweet__card__header {
+    display: flex;
+    padding: 10px;
+}
+
+.tweet__card__content {
+    padding: 0 15px;
+    p {
+        margin: 0;
+    }
+}
+
+.tweet__card__info {
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.info-block {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    p {
+        margin: 0;
+    }
+}
+
+.card-tags {
+    padding: 0 3px;
+}
+
+.tweet__card__actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 0px 10px;
+}
+
+@media (max-width: 720px) { 
+    .tw-size {
+        min-width: 100%;
+    }
+
+    .time {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) { 
+    .tweet__card__info {
+        flex-direction: column;
+        align-items: center;
+    }
+}

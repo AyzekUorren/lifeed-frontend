@@ -25,6 +25,9 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AuthComponent } from './components/auth/auth.component';
+import { TweetsComponent } from './components/tweets/tweets.component';
+import { TweetComponent } from './components/tweet/tweet.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { AuthComponent } from './components/auth/auth.component';
     ProfileComponent,
     SettingsComponent,
     FooterComponent,
-    AuthComponent
+    AuthComponent,
+    TweetsComponent,
+    TweetComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
