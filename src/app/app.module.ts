@@ -18,6 +18,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion'; 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
+import {MatDialogModule} from '@angular/material/dialog';
 
 // Components
 import { HeaderComponent } from './components/header/header.component';
@@ -28,6 +29,7 @@ import { AuthComponent } from './components/auth/auth.component';
 import { TweetsComponent } from './components/tweets/tweets.component';
 import { TweetComponent } from './components/tweet/tweet.component';
 import { SearchComponent } from './components/search/search.component';
+import { AddTweetComponent } from './components/add-tweet/add-tweet.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { SearchComponent } from './components/search/search.component';
     AuthComponent,
     TweetsComponent,
     TweetComponent,
-    SearchComponent
+    SearchComponent,
+    AddTweetComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +64,11 @@ import { SearchComponent } from './components/search/search.component';
     LayoutModule,
     MatSidenavModule,
     MatListModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatDialogModule
+  ],
+  entryComponents: [
+    AddTweetComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
