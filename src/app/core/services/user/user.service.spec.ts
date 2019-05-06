@@ -4,7 +4,7 @@ import {
   HttpClientTestingModule,
   HttpTestingController,
 } from '@angular/common/http/testing';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from '../../../../environments/environment.prod';
 import { ApiSettings } from '../../intefaces/api/settings.inteface';
 
 describe('UserService', () => {
