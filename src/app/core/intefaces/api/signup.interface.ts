@@ -1,4 +1,4 @@
-export interface SignUpIntreface {
+export interface UserIntreface {
   link: string;
   firstName: string;
   middleName: string;
