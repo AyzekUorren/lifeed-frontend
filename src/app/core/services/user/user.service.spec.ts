@@ -1,15 +1,15 @@
+import { UserService } from './user.service';
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { AuthService } from './auth.service';
 import { environment } from 'src/environments/environment.prod';
 import { ApiSettings } from '../../intefaces/api/settings.inteface';
 
-describe('AuthService', () => {
+describe('UserService', () => {
 	let data = { name: 'TestName', value: 'TestValue' };
-	let service: AuthService;
+	let service: UserService;
 	let httpMock: HttpTestingController;
 	const userSettings: ApiSettings = {
-		url: `${environment.API_PATH}${environment.API_PREFIX}`,
+		url: `${environment.API_PATH}${environment.API_PREFIX}/user`,
 		isDelete: true,
 		isGet: true,
 		isPost: true,
@@ -18,10 +18,10 @@ describe('AuthService', () => {
 
 	beforeEach(() => {
 		TestBed.configureTestingModule({
-			providers: [ AuthService ],
+			providers: [ UserService ],
 			imports: [ HttpClientTestingModule ]
 		});
-		service = TestBed.get(AuthService);
+		service = TestBed.get(UserService);
 		httpMock = TestBed.get(HttpTestingController);
 	});
 	afterEach(() => {
