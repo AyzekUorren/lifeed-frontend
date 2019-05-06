@@ -1,0 +1,35 @@
+<div class="header">
+  <div class="header__content">
+    <button mat-icon-button class="nav-bnt" (click)="toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__link"><a mat-button routerLink="">Home</a></li>
+        <li class="nav__link"><a mat-button routerLink="/search">Search</a></li>
+      </ul>
+    </nav>
+    <a routerLink="." class="mat-title title">TwitterApp</a>
+    <div class="header__sub-menu">
+      <button class="user-photo" mat-icon-button [matMenuTriggerFor]="menu"></button>
+      <mat-menu #menu="matMenu">
+        <button routerLink="/profile" mat-menu-item>
+          <mat-icon>person</mat-icon>
+          <span>Profile</span>
+        </button>
+        <button routerLink="." mat-menu-item>
+          <mat-icon>help</mat-icon>
+          <span>Help</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>power_settings_new</mat-icon>
+          <span>Sign out</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+  <div *ngIf="show" class="burger-menu">
+    <a mat-stroked-button routerLink=".">Home</a>
+    <a mat-stroked-button routerLink="/search">Search</a>
+  </div>
+</div>

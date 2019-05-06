@@ -1,0 +1,19 @@
+<section class="add-tweet__content">
+  <form class="add-tweet__form">
+    <mat-form-field>
+      <textarea class="add-tweet__input" matInput #message maxlength="1600" placeholder="Input your tweet.."></textarea>
+      <mat-hint align="end">{{message.value.length}} / 1600</mat-hint>
+    </mat-form-field>
+    <div class="add-tweet__tools">
+      <div>
+        <button mat-button>
+          <mat-icon>sentiment_very_satisfied</mat-icon>
+        </button>
+        <button mat-button>
+          <mat-icon>photo_size_select_actual</mat-icon>
+        </button>
+      </div>
+      <button class="send-post" mat-raised-button color="primary">Send</button>
+    </div>
+  </form>
+</section>
