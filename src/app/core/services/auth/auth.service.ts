@@ -1,4 +1,4 @@
-import { UserIntreface } from '../../intefaces/api/signup.interface';
+import { UserIntreface } from '../../intefaces/api/user.interface';
 import { Injectable } from '@angular/core';
 import { ApiService } from '../api.service';
 import { GlobalProvider } from '../global.service';

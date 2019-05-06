@@ -1,9 +1,9 @@
-import { UserIntreface } from './../../intefaces/api/signup.interface';
+import { UserIntreface } from '../../intefaces/api/user.interface';
 import { Injectable } from '@angular/core';
 import { ApiService } from '../api.service';
 import { GlobalProvider } from '../global.service';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../../environments/environment';
 import { IdInteface } from '../../intefaces/api/id.inteface';
 
 @Injectable({
