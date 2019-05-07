@@ -1,4 +1,4 @@
 export interface TwetTagInterface {
-	twetId: string;
-	tagId: string;
+  twetId: string;
+  tagId: string;
 }
