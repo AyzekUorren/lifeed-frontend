@@ -3,17 +3,15 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.less']
+  styleUrls: ['./header.component.less'],
 })
 export class HeaderComponent implements OnInit {
-
   show = false;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-  
+  ngOnInit() {}
+
   toggle() {
     this.show = !this.show;
   }

@@ -1,3 +1,3 @@
 export interface IdInteface {
-	id: string;
+  id: string;
 }
