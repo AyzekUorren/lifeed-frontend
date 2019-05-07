@@ -32,3 +32,6 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+
+package.json
+**/package.json
