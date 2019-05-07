@@ -34,3 +34,4 @@ testem.log
 /typings
 
 package.json
+**/package.json

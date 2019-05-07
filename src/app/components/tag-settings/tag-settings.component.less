@@ -1,0 +1,40 @@
+.tag-settings__form {
+	display: flex;
+	align-items: center;
+	mat-form-field {
+		margin: 5px;
+	}
+	button {
+		margin: 5px;
+	}
+}
+
+.tag-settings__tags {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tag-settings__remove-item {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	p {
+		margin: 0;
+	}
+	mat-icon {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 576px) {
+	.tag-settings__form {
+		flex-direction: column;
+		button {
+			width: 100%;
+		}
+	}
+	.tag-settings__tags {
+		padding: 10px 5px;
+	}
+}
