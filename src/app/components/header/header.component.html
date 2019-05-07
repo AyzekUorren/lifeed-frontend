@@ -9,12 +9,17 @@
           <a mat-button routerLink="">Home</a>
         </li>
         <li class="nav__link">
-          <a mat-button routerLink="/search">Search</a></li>
+          <a mat-button routerLink="/search">Search</a>
+        </li>
       </ul>
     </nav>
     <a routerLink="." class="mat-title title">TwitterApp</a>
     <div class="header__sub-menu">
-      <button class="user-photo" mat-icon-button [matMenuTriggerFor]="menu"></button>
+      <button
+        class="user-photo"
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+      ></button>
       <mat-menu #menu="matMenu">
         <button routerLink="/profile" mat-menu-item>
           <mat-icon>person</mat-icon>
