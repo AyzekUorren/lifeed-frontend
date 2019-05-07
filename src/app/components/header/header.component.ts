@@ -9,11 +9,19 @@ import { TagSettingsComponent } from '../tag-settings/tag-settings.component';
 export class HeaderComponent implements OnInit {
   show = false;
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit() {}
 
   toggle() {
     this.show = !this.show;
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(TagSettingsComponent, {});
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 }
