@@ -62,7 +62,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged --ignore-path=./package.json"
+      "pre-commit": "pretty-quick --staged"
     }
   }
 }
