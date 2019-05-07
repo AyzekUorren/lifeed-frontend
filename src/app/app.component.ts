@@ -7,5 +7,5 @@ import { AuthService } from './core/services/auth/auth.service';
   styleUrls: ['./app.component.less'],
 })
 export class AppComponent {
-  title = 'twitter-frontend1';
+  title = 'twitter-frontend';
 }

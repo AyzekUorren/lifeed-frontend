@@ -27,6 +27,7 @@
     "express": "^4.16.4",
     "hammerjs": "^2.0.8",
     "path": "^0.12.7",
+    "pretty-quick": "^1.10.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
@@ -40,6 +41,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
+    "husky": "^2.2.0",
     "intl": "^1.2.5",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -60,13 +62,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "pretty-quick --staged"
     }
-  },
-  "lint-staged": {
-    "*.{js,css,json,md}": [
-      "prettier --write",
-      "git add"
-    ]
   }
 }
