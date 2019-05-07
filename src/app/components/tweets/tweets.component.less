@@ -1,95 +1,42 @@
 .tweets {
-    padding-top: 60px;
-    padding-bottom: 15px;
-}
-
-.tweets__head-box {
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    width: 100%;
-    background: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.tweets__tags {
-    padding: 5px 0px;
-    margin: 0 10px;
-}
-
-.btn-tags {
-    color: #fff;
-    background: rgba(63, 81, 181, 1);
-    border-radius: 70px;
-    padding: 3px 10px;
-    margin: 3px 3px;
-    line-height: 20px;
-}
-
-.btn-sort {
-    border: 2px solid rgba(63, 81, 181, 1);
-}
-
-.tweets__sort {
-    padding: 5px 0px;
-    margin: 0 10px;
+	padding-top: 60px;
+	padding-bottom: 15px;
 }
 
 .tweets__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px auto 0 auto;
-    padding: 10px;
-    max-width: 1140px;
-    background: rgba(255, 255, 255, 1);
-    border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px auto 0 auto;
+	padding: 10px;
+	max-width: 1140px;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 5px;
 }
 
 .tweets__container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    .tw-size {
-      width: 50%;  
-    }
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	.tw-size {
+		width: 50%;
+	}
 }
 
 .add-tweet {
-    position: fixed;
-    bottom: 30px; /* Положение от нижнего края */
-    right: 30px; /* Положение от правого края */
-    background-color: rgba(63, 81, 181, 1);
-    width: 50px;
-    height: 50px;
-    mat-icon {
-        color: #fff;
-    }
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	background-color: rgba(63, 81, 181, 1);
+	width: 50px;
+	height: 50px;
+	mat-icon {
+		color: #fff;
+	}
 }
 
-@media (max-width: 950px) { 
-    .tw-size {
-        min-width: 100%;
-    }
-}
-
-@media (max-width: 576px) {
-    .tweets__head-box {
-        flex-direction: column;
-    }
-
-    .tweets__tags {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .tweets__sort {
-        width: 100%;
-    }
-    
-    .btn-sort {
-        width: 100%;
-        border: none;
-    }
+@media (max-width: 950px) {
+	.tw-size {
+		min-width: 100%;
+	}
 }

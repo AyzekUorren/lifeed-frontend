@@ -6,13 +6,7 @@ import { AppComponent } from './app.component';
 
 // Angular Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-  MatButtonModule,
-  MatCheckboxModule,
-  MatSidenavModule,
-  MatListModule,
-  MatBadgeModule,
-} from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatSidenavModule, MatListModule, MatBadgeModule } from '@angular/material';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -25,6 +19,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatChipsModule } from '@angular/material/chips';
 
 // Components
 import { HeaderComponent } from './components/header/header.component';
@@ -40,46 +35,49 @@ import { GlobalProvider } from './core/services/global.service';
 import { ApiService } from './core/services/api.service';
 import { AuthService } from './core/services/auth/auth.service';
 import { AddTweetComponent } from './components/add-tweet/add-tweet.component';
+import { TagSettingsComponent } from './components/tag-settings/tag-settings.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    ProfileComponent,
-    SettingsComponent,
-    FooterComponent,
-    AuthComponent,
-    TweetsComponent,
-    TweetComponent,
-    SearchComponent,
-    AddTweetComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatToolbarModule,
-    MatMenuModule,
-    MatTabsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatIconModule,
-    MatCardModule,
-    MatExpansionModule,
-    FormsModule,
-    ReactiveFormsModule,
-    LayoutModule,
-    MatSidenavModule,
-    MatListModule,
-    MatBadgeModule,
-    MatDialogModule,
-    HttpClientModule,
-  ],
-  entryComponents: [AddTweetComponent],
-  providers: [GlobalProvider, ApiService, AuthService],
-  bootstrap: [AppComponent],
+	declarations: [
+		AppComponent,
+		HeaderComponent,
+		ProfileComponent,
+		SettingsComponent,
+		FooterComponent,
+		AuthComponent,
+		TweetsComponent,
+		TweetComponent,
+		SearchComponent,
+		AddTweetComponent,
+		TagSettingsComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		MatButtonModule,
+		MatCheckboxModule,
+		MatToolbarModule,
+		MatMenuModule,
+		MatTabsModule,
+		MatFormFieldModule,
+		MatInputModule,
+		MatSelectModule,
+		MatIconModule,
+		MatCardModule,
+		MatExpansionModule,
+		FormsModule,
+		ReactiveFormsModule,
+		LayoutModule,
+		MatSidenavModule,
+		MatListModule,
+		MatBadgeModule,
+		MatDialogModule,
+		HttpClientModule,
+		MatChipsModule
+	],
+	entryComponents: [ AddTweetComponent, TagSettingsComponent ],
+	providers: [ GlobalProvider, ApiService, AuthService ],
+	bootstrap: [ AppComponent ]
 })
 export class AppModule {}

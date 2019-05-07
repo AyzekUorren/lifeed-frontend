@@ -1,20 +1,47 @@
 <header></header>
 <section class="search">
-  <div class="search__tag-box">
+  <div class="search__head-box">
     <section class="search__tags">
-      <button mat-button class="btn-tags"># <span class="mat-caption">People</span></button>
-      <button mat-button class="btn-tags"># <span class="mat-caption">Nature</span></button>
-      <button mat-button class="btn-tags"># <span class="mat-caption">2019</span></button>
-      <button mat-button class="btn-tags"># <span class="mat-caption">Сulture</span></button>
-      <button mat-button class="btn-tags"># <span class="mat-caption">Music</span></button>
-      <button mat-button class="btn-tags"># <span class="mat-caption">Fashion</span></button>
-      <button mat-button class="btn-tags"># <span class="mat-caption">Sport</span></button>
-      <button mat-button class="btn-tags"># <span class="mat-caption">Life</span></button>
-      <button mat-button class="btn-tags"># <span class="mat-caption">Girls</span></button>
-      <button mat-button class="btn-tags"># <span class="mat-caption">Friends</span></button>
+      <button mat-button class="btn-tags">
+        # <span class="mat-caption">People</span>
+      </button>
+      <button mat-button class="btn-tags">
+        # <span class="mat-caption">Nature</span>
+      </button>
+      <button mat-button class="btn-tags">
+        # <span class="mat-caption">2019</span>
+      </button>
+      <button mat-button class="btn-tags">
+        # <span class="mat-caption">Сulture</span>
+      </button>
+      <button mat-button class="btn-tags">
+        # <span class="mat-caption">Music</span>
+      </button>
+      <button mat-button class="btn-tags">
+        # <span class="mat-caption">Fashion</span>
+      </button>
+      <button mat-button class="btn-tags">
+        # <span class="mat-caption">Sport</span>
+      </button>
+      <button mat-button class="btn-tags">
+        # <span class="mat-caption">Life</span>
+      </button>
+    </section>
+    <section class="search__sort">
+      <button mat-button color="primary" [matMenuTriggerFor]="menu" class="btn-sort">
+        <mat-icon>keyboard_arrow_down</mat-icon>
+        <span class="mat-caption">Sort by</span>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Name</button>
+        <button mat-menu-item>Author</button>
+        <button mat-menu-item>Date</button>
+        <button mat-menu-item>Updated</button>
+        <button mat-menu-item>Tags</button>
+      </mat-menu>
     </section>
   </div>
-  <div class="wrapper">
+  <div class="content-wrapper">
     <div class="search__string">
       <input class="search__input mat-subheading-1" placeholder="Input your text..">
       <button mat-button color="primary">Search</button>
