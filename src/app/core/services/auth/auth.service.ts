@@ -7,29 +7,29 @@ import { environment } from '../../../../environments/environment';
 import { SignInInterface } from '../../intefaces/api/signin.inteface';
 
 @Injectable({
-    providedIn: 'root',
+  providedIn: 'root',
 })
 export class AuthService extends ApiService {
-    constructor(http: HttpClient, global: GlobalProvider) {
-        super(http, global);
-        this.setSettings({
-            url: `${environment.API_PATH}${environment.API_PREFIX}/auth`,
-            isDelete: false,
-            isGet: true,
-            isPost: true,
-            isPut: false,
-        });
-    }
+  constructor(http: HttpClient, global: GlobalProvider) {
+    super(http, global);
+    this.setSettings({
+      url: `${environment.API_PATH}${environment.API_PREFIX}/auth`,
+      isDelete: false,
+      isGet: true,
+      isPost: true,
+      isPut: false,
+    });
+  }
 
-    public SignIn(authUser: SignInInterface) {
-        return this.makeRequest('POST', { url: '/signin', body: authUser });
-    }
+  public SignIn(authUser: SignInInterface) {
+    return this.makeRequest('POST', { url: '/signin', body: authUser });
+  }
 
-    public SignUp(newUser: UserIntreface) {
-        return this.makeRequest('POST', { url: '/signup', body: newUser });
-    }
+  public SignUp(newUser: UserIntreface) {
+    return this.makeRequest('POST', { url: '/signup', body: newUser });
+  }
 
-    public GetAuthUser() {
-        return this.makeRequest('GET', { url: '' });
-    }
+  public GetAuthUser() {
+    return this.makeRequest('GET', { url: '' });
+  }
 }

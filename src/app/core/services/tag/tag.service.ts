@@ -7,33 +7,33 @@ import { environment } from '../../../../environments/environment';
 import { IdInteface } from '../../intefaces/api/id.inteface';
 
 @Injectable({
-    providedIn: 'root',
+  providedIn: 'root',
 })
 export class TagService extends ApiService {
-    constructor(http: HttpClient, global: GlobalProvider) {
-        super(http, global);
-        this.setSettings({
-            url: `${environment.API_PATH}${environment.API_PREFIX}/tag`,
-            isDelete: true,
-            isGet: true,
-            isPost: true,
-            isPut: true,
-        });
-    }
+  constructor(http: HttpClient, global: GlobalProvider) {
+    super(http, global);
+    this.setSettings({
+      url: `${environment.API_PATH}${environment.API_PREFIX}/tag`,
+      isDelete: true,
+      isGet: true,
+      isPost: true,
+      isPut: true,
+    });
+  }
 
-    public CreateTag(createdTag: TagInterface) {
-        return this.makeRequest('POST', { url: '', body: createdTag });
-    }
+  public CreateTag(createdTag: TagInterface) {
+    return this.makeRequest('POST', { url: '', body: createdTag });
+  }
 
-    public GetTags() {
-        return this.makeRequest('GET', { url: '' });
-    }
+  public GetTags() {
+    return this.makeRequest('GET', { url: '' });
+  }
 
-    public UpdateTag(id: IdInteface, updatedTag: TagInterface) {
-        return this.makeRequest('PUT', { url: `/${id}`, body: updatedTag });
-    }
+  public UpdateTag(id: IdInteface, updatedTag: TagInterface) {
+    return this.makeRequest('PUT', { url: `/${id}`, body: updatedTag });
+  }
 
-    public RemoveTag(id: IdInteface) {
-        return this.makeRequest('DELETE', { url: `/${id}` });
-    }
+  public RemoveTag(id: IdInteface) {
+    return this.makeRequest('DELETE', { url: `/${id}` });
+  }
 }

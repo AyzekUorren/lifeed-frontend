@@ -3,9 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-    production: false,
-    API_PATH: 'https://twitter-app-backend-stage.herokuapp.com/',
-    API_PREFIX: 'v1',
+  production: false,
+  API_PATH: 'https://twitter-app-backend-stage.herokuapp.com/',
+  API_PREFIX: 'v1',
 };
 
 /*

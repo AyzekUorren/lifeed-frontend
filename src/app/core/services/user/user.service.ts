@@ -7,33 +7,33 @@ import { environment } from '../../../../environments/environment';
 import { IdInteface } from '../../intefaces/api/id.inteface';
 
 @Injectable({
-    providedIn: 'root',
+  providedIn: 'root',
 })
 export class UserService extends ApiService {
-    constructor(http: HttpClient, global: GlobalProvider) {
-        super(http, global);
-        this.setSettings({
-            url: `${environment.API_PATH}${environment.API_PREFIX}/user`,
-            isDelete: true,
-            isGet: true,
-            isPost: false,
-            isPut: true,
-        });
-    }
+  constructor(http: HttpClient, global: GlobalProvider) {
+    super(http, global);
+    this.setSettings({
+      url: `${environment.API_PATH}${environment.API_PREFIX}/user`,
+      isDelete: true,
+      isGet: true,
+      isPost: false,
+      isPut: true,
+    });
+  }
 
-    public GetUsers() {
-        return this.makeRequest('GET', { url: '' });
-    }
+  public GetUsers() {
+    return this.makeRequest('GET', { url: '' });
+  }
 
-    public GetUser(id: IdInteface) {
-        return this.makeRequest('GET', { url: `/${id}` });
-    }
+  public GetUser(id: IdInteface) {
+    return this.makeRequest('GET', { url: `/${id}` });
+  }
 
-    public UpdateUser(id: IdInteface, updatedUser: UserIntreface) {
-        return this.makeRequest('PUT', { url: `/${id}`, body: updatedUser });
-    }
+  public UpdateUser(id: IdInteface, updatedUser: UserIntreface) {
+    return this.makeRequest('PUT', { url: `/${id}`, body: updatedUser });
+  }
 
-    public RemoveUser(id: IdInteface) {
-        return this.makeRequest('DELETE', { url: `/${id}` });
-    }
+  public RemoveUser(id: IdInteface) {
+    return this.makeRequest('DELETE', { url: `/${id}` });
+  }
 }
