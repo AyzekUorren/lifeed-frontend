@@ -1,6 +1,6 @@
 {
-  "name": "twitter-frontend",
-  "version": "0.0.0",
+  "name": "lifeed",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start:ng": "ng serve",
