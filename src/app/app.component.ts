@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './core/services/auth/auth.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,7 @@ import { AuthService } from './core/services/auth/auth.service';
   styleUrls: ['./app.component.less'],
 })
 export class AppComponent {
-  title = 'twitter-frontend';
+  constructor(private title: Title) {
+    this.title.setTitle('Lifeed');
+  }
 }

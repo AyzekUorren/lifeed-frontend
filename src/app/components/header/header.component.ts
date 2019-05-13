@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { TagSettingsComponent } from '../tag-settings/tag-settings.component';
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'header',
   templateUrl: './header.component.html',
@@ -9,7 +10,7 @@ import { TagSettingsComponent } from '../tag-settings/tag-settings.component';
 export class HeaderComponent implements OnInit {
   show = false;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, public title: Title) {}
 
   ngOnInit() {}
 
